@@ -9,6 +9,13 @@ function SignUp() {
         email: "",
         password: ""
     })
+    const [resp, setResp] = useState({
+        error: "",
+        message: "",
+        loading: false,
+
+    })
+    const { error, message, loading } = resp;
 
     const { first_name, last_name, email, password } = info;
 
@@ -36,14 +43,21 @@ function SignUp() {
 
 
     const handleClick = () => {
-        createuser(info);
+        createuser(info).then(res => {
+
+        }).catch(err => {
+            console.log(err)
+        })
     }
 
 
     return (
         <Container>
+
             <Row>
                 <Col md={{ span: 6, offset: 3 }}>
+                    {loading && <Cutomg
+                    }
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>First Name</Form.Label>

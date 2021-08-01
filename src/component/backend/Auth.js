@@ -9,7 +9,7 @@ export const createuser = (data) => {
         },
         body: JSON.stringify(data)
     }).then(resp => {
-        console.log(resp);
+        return resp.json();
     }).catch(err => {
         console.log(err);
     })
