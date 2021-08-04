@@ -9,6 +9,7 @@ import CreateProduct from "./component/admin/product/CreateProduct";
 import ManageProduct from "./component/admin/product/ManageProduct";
 import CreateCate from "./component/admin/category/CreateCate";
 import ManageCate from "./component/admin/category/ManageCate";
+import Login from "./component/auth/Login";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/product" component={Product}></Route>
           <Route exact path="/signup" component={SignUp}></Route>
+          <Route exact path="/login" component={Login}></Route>
           <Route exact path="/createProduct" component={CreateProduct}></Route>
           <Route exact path="/manageProduct" component={ManageProduct}></Route>
           <Route exact path="/createCate" component={CreateCate}></Route>

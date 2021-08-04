@@ -22,16 +22,44 @@
 /* admin css */
 .admin {
   display: flex;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   /* background-color: #c3e6d1; */
+  /* padding-top: 50px !important; */
   border-radius: 5px;
 }
-.admin__sidebar {
-  flex: 0.3;
-  padding: 5px;
+.admin__sidebar,
+.admin__canvas {
+  padding-top: 50px !important;
+  flex: 0.2;
+  /* padding: 5px; */
+  /* display: flex;
+   */
+  background-color: rgb(4, 28, 51);
+  height: 92vh;
+}
+.admin__sidebar__list,
+.admin__canvas__list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.admin__sidebar__list > a,
+.admin__canvas__list > a {
+  padding-top: 10px;
+  width: 100%;
+
+  height: 60px;
+  text-decoration: none;
+  color: #fff;
+  /* margin-top: 20px; */
+}
+.admin__sidebar__list > a:hover,
+.admin__canvas__list > a:hover {
+  color: #000;
+  background-color: #fff;
 }
 .admin__main {
-  flex: 0.7;
+  flex: 0.8;
 }
 .admin > .admin__sidebar > .list-group > .list-group-item > a {
   color: #1b98f5;
@@ -40,4 +68,19 @@
 .admin > .admin__sidebar > .list-group > .list-group-item {
   width: 90%;
   text-align: center;
+}
+.canvas_button {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .admin__main {
+    flex: 1;
+  }
+  .admin__sidebar {
+    display: none;
+  }
+  .canvas_button {
+    display: block;
+  }
 }
